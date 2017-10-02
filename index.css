@@ -1,0 +1,590 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.pageTitles h3 {
+	text-align: center;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: normal;
+	font-size: 80px;
+	width: 40%;
+	margin: 0 auto;
+	padding: 40px 40px;
+	border-top: 8px solid #FF7E47;
+	border-bottom: 8px solid #FF7E47;
+	
+}
+
+.home {
+	background-color: #000000;
+	width: 100%;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	background-color: #F2A274;
+	padding: 16px 40px 16px 40px;
+	top: 0;
+	z-index: 20;
+	border-bottom: 10px solid #FF7E47;
+}
+
+nav img {
+	margin: -21px;
+	border: 3px solid #FF7E47;
+	border-radius: 60px;
+}
+
+.hamburger {
+	float: right;
+	display: none;
+}
+
+.navButtons {
+	overflow: auto;
+	float: right;
+	text-decoration: none;
+}
+
+.navOptions {
+	float: left;
+}
+
+.navOptions:hover {
+	background-color: #FF7E47;
+}
+
+nav a {
+	overflow: auto;
+	float: left;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: 'Montserrat',sans-serif;
+	padding: 0 15px 0 15px;
+	border-left: 2px solid #FFFFFF;
+}
+
+.logo {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 53px;
+	margin-bottom: 100px;
+	text-align: left;
+	padding: 100px 0px 40px 0px;
+	font-family: 'Montserrat',sans-serif;
+	color: #FFFFFF;
+	line-height: 70px;
+	border-bottom: 8px solid #FF7E47;
+}
+
+strong {
+	color: #FFFFFF;
+	font-size: 100px;
+}
+
+.logo div::first-letter {
+	font-size: 120px;
+	color: #FF7E47;
+	outline-style: solid;
+	outline-color: #FFFFFF;
+}
+
+.logo div:first-child {
+	position: relative;
+	right: 6px;
+}
+
+.fullstop {
+	color: #FF7E47;
+}
+
+.header {
+	text-decoration: none;
+	border-bottom: 10px solid #FF7E47;
+}
+
+.introduction {
+	background-color: #F2A274;
+	width: 80%;
+	margin: 0 auto;
+	border: 5px solid #FF7E47;
+	border-radius: 5px;
+	position: relative;
+}
+
+.introWrittenContent p {
+	background-color: #F2A274;
+	margin: 0 auto;
+	font-family: 'Raleway',sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	color: #000000;
+	text-align: center;
+	padding: 60px 100px 100px 100px;
+}
+
+.background {
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+	background-image: url("images/bass_player.png");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-size: cover;
+	background-position: bottom right;
+}
+
+h2 {
+	font-family: 'Montserrat',sans-serif;
+	text-align: center;
+	margin-top: 40px;
+	color: #000000;
+	z-index: 20;
+}
+
+.headerColumns {
+	width: 85%;
+	overflow: auto;
+	margin: 0 auto;
+	color: #000000;
+	background-color: #000000;
+	text-align: left;
+	padding: 40px 40px;
+}
+
+.headerColumn img {
+	border-bottom: 5px solid #FF7E47;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.headerColumn {
+	width: 33.3%;
+	float: left;
+	overflow: auto;
+	text-align: justify;
+	padding: 20px 30px 0px 30px;
+}
+
+.headerColumn div {
+	background: #FFFFFF;
+	margin-top: 40px;
+	border-bottom: 8px solid #FF7E47;
+	text-align: center;
+}
+
+.headerColumn p {
+	font-family: 'Raleway',sans-serif;
+	padding: 40px;
+}
+
+.icons {
+	width: 60%;
+	overflow: auto;
+	margin: 0 auto;
+}
+
+.icon {
+	width: 32%;
+	float: left;
+}
+
+.icon.css {
+	margin: 0% 2% 0% 2%;
+}
+
+.icon img {
+	width: 100%;
+	padding: 50px;
+}
+
+.textIcons p {
+	display: block;
+	width: 33.3%;
+	float: left;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	position: relative;
+	bottom: 80px;	
+}
+
+.programIcons {
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.about {
+	padding-top: 100px;
+	border-bottom: 16px solid #FF7E47;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: normal;
+	font-size: 80px;
+}
+
+.aboutRows {
+	width: 75%;
+	padding: 40px;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.aboutRows p {
+	width: 33.3%;
+	float: left;
+	overflow: auto;
+	padding: 20px;
+	font-family: 'Raleway',sans-serif;
+	text-align: justify;
+}
+
+.aboutRows img {
+	display: block;
+	margin: 0 auto;
+	padding: 30px 20px;
+	width: 50%;
+}
+
+.aboutRows div {
+	overflow: auto;
+}
+
+.aboutImages {
+	width: 33.3%;
+	float: left;
+	overflow: auto;
+}
+
+.portfolio {
+	padding-top: 100px;
+	padding-bottom: 200px;
+	background-color: #000000;
+	border-bottom: 16px solid #FF7E47;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+.portfolioRows {
+	width: 80%;
+	overflow: auto;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.portfolioRow {
+	width: 100%;
+	overflow: auto;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.portfolioRows .portfolioImage,
+.portfolioRows .portfolioContent {
+	float: left;
+}
+
+.portfolioContent {
+	width: 60%;
+	padding-left: 80px;
+}
+
+.portfolioContent p {
+	width: 75%;
+	font-family: 'Raleway',sans-serif;
+}
+
+.portfolioImage {
+	width: 40%;
+	margin-top: 25px;
+}
+
+.portfolio img {
+	width: 100%;
+	background-color: #000000;
+}
+
+h4 {
+	font-family: 'Montserrat',sans-serif;
+	font-weight: normal;
+}
+
+.contact {
+	font-family: 'Raleway',sans-serif;
+	padding-top: 100px;
+	margin-bottom: 100px;
+	font-weight: bold;
+}
+
+.contactContent {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+.contact img {
+	border: 4px solid #FF7E47;
+	border-radius: 50%;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+.contact p {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.contact a {
+	margin-top: 20px;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FF7E47;
+}
+
+.footer {
+	background-color: #F2A274;
+	border-top: 10px solid #FF7E47;
+	border-bottom: 10px solid #FF7E47;
+	padding: 50px 50px;
+	font-family: 'Raleway',sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+.footer img {
+	margin-bottom: 40px;
+	border: 5px solid #FF7E47;
+	border-radius: 60px;
+}
+
+
+/*MEDIA QUERIES*/
+
+
+
+@media screen and (max-width: 1600px) {
+	.textIcons p {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.textIcons p {
+		font-size: 40px;
+	}
+	
+	.pageTitles h3 {
+		font-size: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+	.headerColumn {
+		width: 100%;
+	}
+
+	.introduction {
+		width: 100%;
+	}
+
+	.textIcons p {
+		font-size: 32px;
+	}
+
+	.aboutImages {
+		width: 100%;
+
+	}
+
+	.aboutRows p {
+		width: 100%;
+	}
+
+	.pageTitles h3 {
+		font-size: 50px;
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+	.icon {
+		width: 100%;
+	}
+	
+	.textIcons p {
+		display: none;
+	}
+	
+	.aboutImages {
+		width: 100%;
+	}
+	
+	.aboutRows p {
+		width: 100%;
+	}
+	
+	.pageTitles h3 {
+		width: 100%;
+		font-size: 60px;
+	}
+	
+	.portfolioRows {
+		left: 0;
+		width: 100%;
+		padding: 40px;
+	}
+	
+	.portfolioContent {
+	}
+	
+	h4 {
+		padding-left: 60px;
+	}
+	
+	.portfolio p {
+		padding-left: 60px;
+	}
+	
+}
+
+@media screen and (max-width: 640px) {
+	.navOptions {
+		display: none;
+	}
+	
+	.introWrittenContent {
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+	}
+	
+	.introWrittenContent p {
+		width: 100%;
+		padding: 0px;
+		font-size: 20px;
+	}
+	
+	.pageTitles h3 {
+		width: 100%;
+		font-size: 40px;
+	}
+	
+	strong {
+		font-size: 80px;
+	}
+	
+	.logo div::first-letter {
+		font-size: 80px;
+	}
+	
+	 .logo {
+		width: 50%;
+		line-height: 40px;
+		padding: 100px 0px 20px 0px;
+	}
+	
+	.aboutRows {
+		width: 100%;
+		padding: 0px;
+	}
+	
+	.headerColumns {
+		width: 100%;
+		padding: 0px;
+	}
+	
+	.headerColumn {
+		padding: 0px;
+	}
+
+	.contactContent {
+		width: 100%;
+	}
+	
+	.contact img {
+		width: 50%;
+	}
+	
+	.footer {
+		padding: 2px 20px;
+	}
+	
+	.portfolioRows {
+		left: 0;
+		width: 100%;
+		padding: 40px;
+	}
+	
+	.portfolioContent p {
+		display: none;
+	}
+	
+	.portfolioRows .portfolioImage {
+		float: none;
+	}
+	
+	h4 {
+		text-align: justify;
+		font-size: 40px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	strong {
+		font-size: 60px;
+	}
+	
+	.logo div::first-letter {
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	strong {
+		font-size: 50px;
+	}
+	
+	.logo div::first-letter {
+		font-size: 50px;
+	}
+	
+	 h4 {
+		font-size: 25px;
+		padding-left: 0px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	strong {
+		font-size: 40px;
+	}
+	
+	.logo div::first-letter {
+		font-size: 40px;
+	}
+	
+ 
+}
+
+@media screen and (max-width: 640px) {
+	.hamburger {
+		display: inline;
+	}
