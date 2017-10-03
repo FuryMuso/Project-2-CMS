@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Montserrat',sans-serif;
+    margin-top: 25px;
+    font-weight: normal;
+    color: #000000;
+    z-index: 20;
+}
+
+.cmsForm {
+    width: 100%;
+    margin: 0 auto;
+}
