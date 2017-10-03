@@ -11,18 +11,18 @@
     <form action="PDO-insert.php" method="POST">
         <h1>Add to About Me</h1>
         <h2>Add Section</h2>
-            <input type="text" name="content_name">
+            <input type="text" name="section_title">
         <h2>Add Text</h2>
-            <textarea rows="16" cols="75"></textarea>
+            <textarea rows="16" name="text_input" name="" cols="75"></textarea>
         <br>
             <input class="editingButton" type="submit" value="Add">
     </form>
     <form action="PDO-insert.php" method="POST">
         <h1>Edit About Me</h1>
         <h2>Edit Section Name</h2>
-            <input type="text" name="content_name">
+            <input type="text" name="section_title">
         <h2>Edit Text</h2>
-            <textarea rows="16" cols="75"></textarea>
+            <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
             <input class="editingButton" type="submit" value="Make Changes">
     </form>
