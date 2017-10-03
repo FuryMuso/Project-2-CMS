@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway: 400,700" rel="stylesheet">
     <link href="cms-form.css" type="text/css" rel="stylesheet">
-    <title>CMS page</title>
+    <title>About CMS Form</title>
 </head>
 <body>
 <div class="cmsForm">
@@ -27,7 +27,7 @@
             <input class="editingButton" type="submit" value="Make Changes">
     </form>
     <form action="" method="POST">
-        <h1>Delete About Me</h1>
+        <h1>Delete From About Me</h1>
         <br>
             <input class="editingButton" type="submit" value="Delete">
     </form>
