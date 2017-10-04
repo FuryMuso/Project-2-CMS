@@ -1,7 +1,7 @@
 <?php
 
 include_once ('home-add-select-pdo.php');
-$homeContent = retrieveData();
+$homeContent = retrieveHomeData();
 
 ?>
 
