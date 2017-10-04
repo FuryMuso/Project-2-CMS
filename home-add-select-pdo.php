@@ -1,11 +1,11 @@
 <?php
 
 /**
- * select data from database
+ * select Home data from database
  *
- * @return array
+ * @return array to be later inserted into webpage
  */
-function retrieveData()
+function retrieveHomeData()
 {
     $db = new PDO('mysql:host=127.0.0.1;dbname=CMSproject', 'root');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -15,7 +15,8 @@ function retrieveData()
 
     return $query->fetchAll();
 
-
 }
+
+retrieveHomeData();
 
 ?>
