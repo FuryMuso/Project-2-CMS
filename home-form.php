@@ -1,6 +1,6 @@
 <?php
 include_once('home-add-select-pdo.php');
-$dbResults = retrieveHomeData();
+$dbDeleteResults = retrieveHomeData();
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +25,9 @@ $dbResults = retrieveHomeData();
     <form action="home-edit-insert-pdo.php" method="POST">
         <h1>Edit Home</h1>
         <h3>Edit Options</h3>
-        <select class="deleteHomeOptions" name="toEdit">
+        <select class="editHomeOptions" name="toEdit">
             <?php
-            foreach ($dbResults as $editOption) {
+            foreach ($dbDeleteResults as $editOption) {
                 echo "<option>" . $editOption['section_title'] . "</option>";
             }
             ?>
@@ -45,7 +45,7 @@ $dbResults = retrieveHomeData();
         <h3>Delete Options</h3>
         <select class="deleteHomeOptions" name="toDelete">
             <?php
-                foreach ($dbResults as $deleteOption) {
+                foreach ($dbDeleteResults as $deleteOption) {
                     echo "<option>" . $deleteOption['section_title'] . "</option>";
                 }
             ?>
