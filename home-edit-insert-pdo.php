@@ -14,6 +14,8 @@ function editHomeContent()
     $query->execute();
 }
 
+editHomeContent();
+
 header ('Location: home-form.php');
 
 ?>
