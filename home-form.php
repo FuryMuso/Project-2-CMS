@@ -22,24 +22,35 @@ $dbDeleteResults = retrieveHomeData();
         <br>
         <input class="editingButton" type="submit" value="Add">
     </form>
-    <form action="home-edit-insert-pdo.php" method="POST">
+    <form action="home-form.php" method="POST">
         <h1>Edit Home</h1>
         <h3>Edit Options</h3>
         <select class="editHomeOptions" name="toEdit">
             <?php
             foreach ($dbDeleteResults as $editOption) {
-                echo "<option>" . $editOption['section_title'] . "</option>";
+                echo "<option value='" . $editOption['id'] . "'>" . $editOption['section_title'] . "</option>";
             }
             ?>
-        </select>
-        <h2>Edit Section Name</h2>
-            <input type="text" name="section_title"><br>
-        <br>
-        <h2>Edit Text</h2>
-            <textarea rows="16" name="text_input" cols="75"></textarea>
-        <br>
-            <input class="editingButton" type="submit" value="Make Changes">
+        </select><br>
+        <input type="submit" value="Edit This Section">
     </form>
+
+    <?php
+    if ($_POST['toEdit']) {
+        $currentSection = findSection($_POST['toEdit'],$dbDeleteResults);?>
+        <form action="home-edit-insert-pdo.php" method="POST">
+            <h2>Edit Section Name</h2>
+            <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
+            <input type="text" name="section_title" value="<?php echo $currentSection['section_title']; ?>"><br>
+            <br>
+            <h2>Edit Text</h2>
+            <textarea rows="16" name="text_input" cols="75"><?php echo $currentSection['text_input']; ?></textarea>
+            <br>
+            <input class="editingButton" type="submit" value="Make Changes">
+        </form>
+    <?php } ?>
+    
+    
     <form action="home-delete-delete-pdo.php" method="POST">
         <h1>Delete From Home</h1>
         <h3>Delete Options</h3>
