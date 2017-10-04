@@ -25,10 +25,10 @@ $dbResults = retrieveHomeData();
     <form action="home-edit-insert-pdo.php" method="POST">
         <h1>Edit Home</h1>
         <h3>Edit Options</h3>
-        <select class="deleteHomeOptions" name="toDelete">
+        <select class="deleteHomeOptions" name="toEdit">
             <?php
-            foreach ($dbResults as $deleteOption) {
-                echo "<option>" . $deleteOption['section_title'] . "</option>";
+            foreach ($dbResults as $editOption) {
+                echo "<option>" . $editOption['section_title'] . "</option>";
             }
             ?>
         </select>
