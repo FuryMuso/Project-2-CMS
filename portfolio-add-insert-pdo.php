@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * function to input data into Portfolio table in database
+ */
 function addPortfolioContent()
 {
     $db = new PDO('mysql:host=127.0.0.1;dbname=CMSproject', 'root');
