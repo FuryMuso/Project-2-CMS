@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * function to retrieve data from the About table of the database
+ *
+ * @return array
+ */
 function retrieveData()
 {
     $db = new PDO('mysql:host=127.0.0.1;dbname=CMSproject', 'root');
@@ -9,8 +14,6 @@ function retrieveData()
     $query->execute();
 
     return $query->fetchAll();
-
-
 }
 
 ?>
