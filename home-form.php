@@ -24,7 +24,7 @@ $dbResults = retrieveHomeData();
     </form>
     <form action="home-edit-insert-pdo.php" method="POST">
         <h1>Edit Home</h1>
-        <h2>Edit Section Name</h2>
+        <h3>Edit Options</h3>
         <select class="deleteHomeOptions" name="toDelete">
             <?php
             foreach ($dbResults as $deleteOption) {
@@ -32,6 +32,8 @@ $dbResults = retrieveHomeData();
             }
             ?>
         </select>
+        <h2>Edit Section Name</h2>
+            <input type="text" name="section_title"><br>
         <br>
         <h2>Edit Text</h2>
             <textarea rows="16" name="text_input" cols="75"></textarea>
@@ -40,6 +42,7 @@ $dbResults = retrieveHomeData();
     </form>
     <form action="home-delete-delete-pdo.php" method="POST">
         <h1>Delete From Home</h1>
+        <h3>Delete Options</h3>
         <select class="deleteHomeOptions" name="toDelete">
             <?php
                 foreach ($dbResults as $deleteOption) {
