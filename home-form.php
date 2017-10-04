@@ -1,3 +1,8 @@
+<?php
+include_once('home-add-select-pdo.php');
+$dbResults = retrieveHomeData();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +25,14 @@
     <form action="home-edit-insert-pdo.php" method="POST">
         <h1>Edit Home</h1>
         <h2>Edit Section Name</h2>
-            <input type="text" name="section_title">
+        <select class="deleteHomeOptions" name="toDelete">
+            <?php
+            foreach ($dbResults as $deleteOption) {
+                echo "<option>" . $deleteOption['section_title'] . "</option>";
+            }
+            ?>
+        </select>
+        <br>
         <h2>Edit Text</h2>
             <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
@@ -28,6 +40,13 @@
     </form>
     <form action="home-delete-delete-pdo.php" method="POST">
         <h1>Delete From Home</h1>
+        <select class="deleteHomeOptions" name="toDelete">
+            <?php
+                foreach ($dbResults as $deleteOption) {
+                    echo "<option>" . $deleteOption['section_title'] . "</option>";
+                }
+            ?>
+        </select>
         <br>
             <input class="editingButton" type="submit" value="Delete">
     </form>
