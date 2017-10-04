@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * function to add data to about table of database
+ */
 function addAboutContent()
 {
     $db = new PDO('mysql:host=127.0.0.1;dbname=CMSproject', 'root');
@@ -13,6 +16,6 @@ function addAboutContent()
 
 addAboutContent();
 
-header('Location: home-form.php');
+header('Location: about-form.php');
 
 ?>
