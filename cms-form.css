@@ -25,8 +25,21 @@ h2 {
     font-family: 'Raleway',sans-serif;
     width: 20%;
     margin: 0 auto;
+    margin-top: 25px;
     padding: 20px;
     font-weight: normal;
+    /*border-bottom: 2px solid #404040;*/
+    color: #000000;
+    z-index: 20;
+}
+
+
+h3 {
+    font-family: 'Raleway',sans-serif;
+    width: 20%;
+    margin: 0 auto;
+    padding: 20px;
+    font-weight: bold;
     /*border-bottom: 2px solid #404040;*/
     color: #000000;
     z-index: 20;
@@ -51,7 +64,7 @@ input {
     font-weight: bold;
     text-align: center;
     padding: 8px;
-    margin: 5px 0px 30px 0px;
+    margin: 5px 0px 20px 0px;
     border: 2px solid #F2A274;
     border-radius: 3px;
     text-decoration: none;
