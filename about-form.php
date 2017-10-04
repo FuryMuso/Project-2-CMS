@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="cmsForm">
-    <form action="PDO-insert.php" method="POST">
+    <form action="about-insert.php" method="POST">
         <h1>Add to About Me</h1>
         <h2>Add Section</h2>
             <input type="text" name="section_title">

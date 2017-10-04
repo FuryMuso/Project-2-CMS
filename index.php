@@ -1,3 +1,10 @@
+<?php
+
+include_once ('home-add-select-pdo.php');
+$homeContent = retrieveData();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -31,7 +38,7 @@
 						<header class="header" id="index">
 						    <h1 class="logo">
 								<div><strong>Dan</strong></div>
-								<div><strong>Tucker</strong><strong class="fullstop">.</strong></div>			
+								<div><strong>Tucker</strong><strong class="fullstop">.</strong></div>
 							</h1></a>
 								<div class="introduction">
 									<div class="introWrittenContent">
@@ -81,7 +88,7 @@
 			  </section>
 				
 			<!-- ABOUT PAGE BEGINS -->
-			
+
 			  <section class="about" id="about">
 				  <div class="pageTitles aboutContainer">
 					  <h3>ABOUT ME</h3>
@@ -109,22 +116,7 @@
                                 <p class="contentRight">Sed euismod, neque id blandit consectetur, enim leo cursus mauris, vitae molestie metus urna quis lectus. Proin at tincidunt dolor. Donec ornare et lectus ac venenatis. Aliquam ex est, vestibulum consectetur est vel, pellentesque elementum velit. Sed ullamcorper ex neque, et aliquet purus feugiat eu. Quisque tempor erat et justo efficitur maximus. Morbi velit sem, pretium a iaculis a, bibendum sed justo. </p>
 						  </div>
 					  </div>
-				  <section>
-				  		<h4>Add To About</h4>
-				  		<form action="addToAbout.php" method="GET">
-					  		<input type="text">
-					  		<input type="submit" value="Submit">
-				  		</form>
-				  		<h4>Edit About</h4>
-				  		<form action="EditAbout.php" method="GET">
-					  		<input type="submit" value="Submit">
-				  			</form>
-				  		<h4>Delete from About</h4>
-				  		<form action="deleteFromAbout.php" method="GET">
-					  		<input type="submit" value="Delete">
-				  		</form>
-				  </section>
-			  </section>
+              </section>
 				
 			<!-- PORTFOLIO PAGE BEGINS -->
 			
@@ -133,6 +125,23 @@
 						<h3>PORTFOLIO</h3>
 					</div>
 					<div class="portfolioRows">
+
+<!--                        --><?php
+//                        foreach ($homeContent as $outputHomeContent)
+//                        {
+//                      echo '<h1>' . $outputHomeContent['section_title'] . '</h1>';
+//                      echo '<p>' . $outputHomeContent['text_input'] . '</p>';
+//
+//                           echo "<div class='portfolioRow'>
+//							<a class='portfolioImage' href='my first project'><img src='images/pilotshop-logo.png' alt='A photo of my first project'></a>
+//							<div class='portfolioContent'>
+//								<h4>" . $outputHomeContent['section_title'] . "</h4>
+//								<p>" . $outputHomeContent['text_input'] . "</p>
+//							</div>
+//						</div>";
+//                        }
+//                        ?>
+
 						<div class="portfolioRow">
 							<a class="portfolioImage" href="my first project"><img src="images/pilotshop-logo.png" alt="A photo of my first project"></a>
 							<div class="portfolioContent">

@@ -8,21 +8,21 @@
 </head>
 <body>
 <div class="cmsForm">
-    <form action="PDO-insert.php" method="POST">
+    <form action="portfolio-add-insert-pdo.php" method="POST">
         <h1>Add to Portfolio</h1>
         <h2>Add Section</h2>
-            <input type="text" name="content_name">
+            <input type="text" name="section_title">
         <h2>Add Text</h2>
-            <textarea rows="16" cols="75"></textarea>
+            <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
             <input class="editingButton" type="submit" value="Add">
     </form>
-    <form action="PDO-insert.php" method="POST">
+    <form action="portfolio-edit-insert-pdo.php" method="POST">
         <h1>Edit Portfolio</h1>
         <h2>Edit Section Name</h2>
-            <input type="text" name="content_name">
+            <input type="text" name="section_title">
         <h2>Edit Text</h2>
-            <textarea rows="16" cols="75"></textarea>
+            <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
             <input class="editingButton" type="submit" value="Make Changes">
     </form>

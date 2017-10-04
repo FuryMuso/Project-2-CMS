@@ -15,7 +15,7 @@
         <h2>Add Text</h2>
             <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
-            <input class="editingButton" type="submit" value="Add">
+        <input class="editingButton" type="submit" value="Add">
     </form>
     <form action="home-edit-insert-pdo.php" method="POST">
         <h1>Edit Home</h1>
@@ -26,7 +26,7 @@
         <br>
             <input class="editingButton" type="submit" value="Make Changes">
     </form>
-    <form action="" method="POST">
+    <form action="home-delete-delete-pdo.php" method="POST">
         <h1>Delete From Home</h1>
         <br>
             <input class="editingButton" type="submit" value="Delete">

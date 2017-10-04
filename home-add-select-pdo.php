@@ -17,6 +17,6 @@ function retrieveHomeData()
 
 }
 
-retrieveHomeData();
+//Todo put retrieveHomeData(); in the right place
 
 ?>
