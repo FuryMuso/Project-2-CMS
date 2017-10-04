@@ -79,3 +79,13 @@ textarea {
     margin: 10px 0px 10px 0px;
     padding: 5px;
 }
+
+select {
+    font-family: 'Raleway',sans-serif;
+    font-weight: bold;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FF7E47;
+    border-radius: 4px;
+    margin: 20px 0px 20px 0px;
+}
