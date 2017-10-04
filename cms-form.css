@@ -36,6 +36,7 @@ h2 {
 
 h3 {
     font-family: 'Raleway',sans-serif;
+    text-decoration: underline;
     width: 20%;
     margin: 0 auto;
     padding: 20px;
