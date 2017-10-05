@@ -1,7 +1,7 @@
 <?php
 
 /**
- * function created to place data into About section of database
+ * function created to place data into Home section of database
  */
 function editHomeContent()
 {
