@@ -16,12 +16,12 @@ $homeData = retrieveHomeData();
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway: 400,700" rel="stylesheet">
     <link href="cms-form.css" type="text/css" rel="stylesheet">
-    <title>Home CMS Form</title>
+    <title>Home</title>
 </head>
 <body>
 <div class="cmsNav">
     <div class="navOption">
-        <a href="about-form.php"><input class="aboutOption" type="submit" value="About"></a>
+        <a href="about-form.php"><input class="homeOption" type="submit" value="About"></a>
         <a href="portfolio-form.php"><input class="portfolioOption" type="submit" value="Portfolio"></a>
     </div>
 </div>
@@ -44,7 +44,6 @@ $homeData = retrieveHomeData();
         <br>
         <input class="editingButton" type="submit" value="Add">
     </form>
-
     <form action="home-form.php" method="POST">
         <h1>Edit Home</h1>
         <h3>Edit Options</h3>
@@ -57,10 +56,9 @@ $homeData = retrieveHomeData();
         </select><br>
         <input type="submit" value="Edit This Section">
     </form>
-
     <?php
     if ($_POST['toEdit']) {
-        $currentSection = findSection($_POST['toEdit'],$homeData);?>
+        $currentSection = findSection($_POST['toEdit'], $homeData);?>
         <form action="home-edit-insert-pdo.php" method="POST">
             <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
             <h2>Edit Text</h2>
@@ -69,16 +67,14 @@ $homeData = retrieveHomeData();
             <input class="editingButton" type="submit" value="Make Changes">
         </form>
     <?php } ?>
-    
-    
     <form action="home-delete-delete-pdo.php" method="POST">
         <h1>Delete From Home</h1>
         <h3>Delete Options</h3>
         <select class="deleteHomeOptions" name="toDelete">
             <?php
-                foreach ($homeData as $deleteOption) {
-                    echo "<option value='" . $deleteOption['id'] . "'>" . $deleteOption['id'] . ' - ' . $deleteOption['section_title'] . "</option>";
-                }
+            foreach ($homeData as $deleteOption) {
+                echo "<option value='" . $deleteOption['id'] . "'>" . $deleteOption['id'] . ' - ' . $deleteOption['section_title'] . "</option>";
+            }
             ?>
         </select>
         <br>
