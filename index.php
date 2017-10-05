@@ -33,6 +33,11 @@ $homeContent = retrieveHomeData();
 								<div class="navOptions">
 									<a href="#contact">Contact</a>
 								</div>
+                                <div class="navOptions">
+                                    <form method="POST" action="login.php" target="_blank">
+                                        <input type="submit" value="CMS">
+                                    </form>
+                                </div>
 							</div>	
 				   </nav>
 						<header class="header" id="index">
@@ -42,30 +47,41 @@ $homeContent = retrieveHomeData();
 							</h1></a>
 								<div class="introduction">
 									<div class="introWrittenContent">
-										<h2>Introduction.</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur dui vitae est interdum pulvinar. Duis a viverra erat. Curabitur vel facilisis nibh, at interdum diam. Sed placerat pharetra urna, vitae tempus nibh dapibus ullamcorper. Nam elementum ullamcorper libero, eget facilisis risus luctus a. Quisque neque magna, sollicitudin sed vehicula non, malesuada ut felis. Quisque venenatis magna vel metus auctor efficitur. Curabitur sit amet venenatis enim, sit amet elementum felis. Integer volutpat orci sed tortor vehicula tincidunt. Maecenas dignissim, erat nec semper convallis, mi ante sagittis arcu, sed ultrices quam magna et enim. Nam magna purus, rhoncus vitae gravida at, auctor a lorem. Sed vestibulum condimentum nisl, at sollicitudin tortor tempus vel. Suspendisse nisi sapien, venenatis eget rhoncus ullamcorper, ullamcorper at justo. Suspendisse a porttitor nisl. Pellentesque vestibulum semper egestas. Nulla quis viverra leo. </p>
+                                        <?php
+                                        foreach ($homeContent as $outputHomeContent)
+                                        {
+                                            if ($outputHomeContent['section_title'] == 'intro_header') {
+                                                echo "<h2>" . $outputHomeContent['text_input'] . "</h2>";
+                                            }
+                                        }
+
+
+                                        foreach ($homeContent as $outputHomeContent)
+                                        {
+                                            if ($outputHomeContent['section_title'] == 'intro') {
+                                                echo "<p>" . $outputHomeContent['text_input'] . "</p>";
+                                            }
+                                        }
+                                        ?>
+
 									</div>
 									<div class="background"> </div>
 							 </div>
 								<div class="headerColumns">
-										<div class="headerColumn">
-											<div>
-												<img src="images/logo-orange.png" alt="An image of...">
-												<p>Pellentesque ac hendrerit nunc. Aliquam scelerisque sodales ante. Phasellus sit amet semper elit. In ut sollicitudin nunc, sit amet egestas tortor. Fusce dapibus arcu non placerat tempor. Etiam facilisis consequat tortor, vitae efficitur purus pharetra et. Integer venenatis, elit in maximus semper, mi felis eleifend velit, sed congue justo purus nec eros. Nulla vel lorem consequat magna aliquam convallis at eget lacus. Proin dignissim massa maximus pulvinar tincidunt. Nunc eleifend, sapien eu convallis cursus, tortor purus consectetur velit, nec tristique magna ante eu eros. Duis pharetra dui at tellus iaculis efficitur. </p>
-											</div>
-										</div>
-										<div class="headerColumn">
-											<div>
-												<img src="images/logo-orange.png" alt="An image of...">
-												<p>Pellentesque ac hendrerit nunc. Aliquam scelerisque sodales ante. Phasellus sit amet semper elit. In ut sollicitudin nunc, sit amet egestas tortor. Fusce dapibus arcu non placerat tempor. Etiam facilisis consequat tortor, vitae efficitur purus pharetra et. Integer venenatis, elit in maximus semper, mi felis eleifend velit, sed congue justo purus nec eros. Nulla vel lorem consequat magna aliquam convallis at eget lacus. Proin dignissim massa maximus pulvinar tincidunt. Nunc eleifend, sapien eu convallis cursus, tortor purus consectetur velit, nec tristique magna ante eu eros. Duis pharetra dui at tellus iaculis efficitur. </p>
-											</div>
-										</div>
-										<div class="headerColumn">
-											<div>
-												<img src="images/logo-orange.png" alt="An image of...">
-												<p>Pellentesque ac hendrerit nunc. Aliquam scelerisque sodales ante. Phasellus sit amet semper elit. In ut sollicitudin nunc, sit amet egestas tortor. Fusce dapibus arcu non placerat tempor. Etiam facilisis consequat tortor, vitae efficitur purus pharetra et. Integer venenatis, elit in maximus semper, mi felis eleifend velit, sed congue justo purus nec eros. Nulla vel lorem consequat magna aliquam convallis at eget lacus. Proin dignissim massa maximus pulvinar tincidunt. Nunc eleifend, sapien eu convallis cursus, tortor purus consectetur velit, nec tristique magna ante eu eros. Duis pharetra dui at tellus iaculis efficitur. </p>
-											</div>
-							           </div>
+                                        <?php
+                                        foreach ($homeContent as $outputHomeContent)
+                                        {
+                                            if ($outputHomeContent['section_title'] == 'column') {
+                                                echo "
+                                                <div class='headerColumn'>
+                                                    <div>
+                                                        <img src='images/logo-orange.png' alt='An image of...'>
+                                                        <p>" . $outputHomeContent['text_input'] . "</p>
+                                                    </div>
+                                                </div>";
+                                            }
+                                        }
+                                        ?>
 							   </div>
 							   <div class="icons">
 								   <div class="programIcons">
@@ -126,20 +142,20 @@ $homeContent = retrieveHomeData();
 					</div>
 					<div class="portfolioRows">
 
-<!--                        --><?php
-//                        foreach ($homeContent as $outputHomeContent)
-//                        {
-//                      echo '<h1>' . $outputHomeContent['section_title'] . '</h1>';
-//                      echo '<p>' . $outputHomeContent['text_input'] . '</p>';
-//
-//                           echo "<div class='portfolioRow'>
-//							<a class='portfolioImage' href='my first project'><img src='images/pilotshop-logo.png' alt='A photo of my first project'></a>
-//							<div class='portfolioContent'>
-//								<h4>" . $outputHomeContent['section_title'] . "</h4>
-//								<p>" . $outputHomeContent['text_input'] . "</p>
-//							</div>
-//						</div>";
-//                        }
+                        <?php
+                        foreach ($homeContent as $outputHomeContent)
+                        {
+                      echo '<h1>' . $outputHomeContent['section_title'] . '</h1>';
+                      echo '<p>' . $outputHomeContent['text_input'] . '</p>';
+
+                           echo "<div class='portfolioRow'>
+							<a class='portfolioImage' href='my first project'><img src='images/pilotshop-logo.png' alt='A photo of my first project'></a>
+							<div class='portfolioContent'>
+								<h4>" . $outputHomeContent['section_title'] . "</h4>
+								<p>" . $outputHomeContent['text_input'] . "</p>
+							</div>
+						</div>";
+                        }
 //                        ?>
 
 						<div class="portfolioRow">
