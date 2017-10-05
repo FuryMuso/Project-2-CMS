@@ -17,7 +17,7 @@ function retrieveAboutData()
 
 }
 
-function findSection($id, $data) {
+function findAboutSection($id, $data) {
     foreach ($data as $section) {
         if($section['id'] == $id) {
             return $section;

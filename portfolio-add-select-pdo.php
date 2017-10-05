@@ -17,7 +17,7 @@ function retrievePortfolioData()
 
 }
 
-function findSection($id, $data) {
+function findPortfolioSection($id, $data) {
     foreach ($data as $section) {
         if($section['id'] == $id) {
             return $section;
