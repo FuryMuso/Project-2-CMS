@@ -58,7 +58,7 @@ $aboutData = retrieveAboutData();
     </form>
     <?php
     if ($_POST['toEdit']) {
-        $currentSection = findSection($_POST['toEdit'], $aboutData);?>
+        $currentSection = findAboutSection($_POST['toEdit'], $aboutData);?>
         <form action="about-edit-insert-pdo.php" method="POST">
             <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
             <h2>Edit Text</h2>

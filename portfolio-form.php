@@ -58,7 +58,7 @@ $portfolioData = retrievePortfolioData();
     </form>
     <?php
     if ($_POST['toEdit']) {
-        $currentSection = findSection($_POST['toEdit'], $portfolioData);?>
+        $currentSection = findPortfolioSection($_POST['toEdit'], $portfolioData);?>
         <form action="portfolio-edit-insert-pdo.php" method="POST">
             <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
             <h2>Edit Text</h2>
