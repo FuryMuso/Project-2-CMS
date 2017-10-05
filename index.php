@@ -126,21 +126,21 @@ $homeContent = retrieveHomeData();
 					</div>
 					<div class="portfolioRows">
 
-<!--                        --><?php
-//                        foreach ($homeContent as $outputHomeContent)
-//                        {
-//                      echo '<h1>' . $outputHomeContent['section_title'] . '</h1>';
-//                      echo '<p>' . $outputHomeContent['text_input'] . '</p>';
-//
-//                           echo "<div class='portfolioRow'>
-//							<a class='portfolioImage' href='my first project'><img src='images/pilotshop-logo.png' alt='A photo of my first project'></a>
-//							<div class='portfolioContent'>
-//								<h4>" . $outputHomeContent['section_title'] . "</h4>
-//								<p>" . $outputHomeContent['text_input'] . "</p>
-//							</div>
-//						</div>";
-//                        }
-//                        ?>
+                        <?php
+                        foreach ($homeContent as $outputHomeContent)
+                        {
+                      echo '<h1>' . $outputHomeContent['section_title'] . '</h1>';
+                      echo '<p>' . $outputHomeContent['text_input'] . '</p>';
+
+                           echo "<div class='portfolioRow'>
+							<a class='portfolioImage' href='my first project'><img src='images/pilotshop-logo.png' alt='A photo of my first project'></a>
+							<div class='portfolioContent'>
+								<h4>" . $outputHomeContent['section_title'] . "</h4>
+								<p>" . $outputHomeContent['text_input'] . "</p>
+							</div>
+						</div>";
+                        }
+                        ?>
 
 						<div class="portfolioRow">
 							<a class="portfolioImage" href="my first project"><img src="images/pilotshop-logo.png" alt="A photo of my first project"></a>
