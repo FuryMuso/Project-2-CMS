@@ -1,7 +1,11 @@
 <?php
 
 include_once ('home-add-select-pdo.php');
+include_once ('about-add-select-pdo.php');
+include_once ('portfolio-add-select-pdo.php');
 $homeContent = retrieveHomeData();
+$aboutContent = retrieveAboutData();
+$portfolioContent = retrievePortfolioData();
 
 ?>
 
@@ -131,6 +135,18 @@ $homeContent = retrieveHomeData();
 									</div>
                                 <p class="contentRight">Sed euismod, neque id blandit consectetur, enim leo cursus mauris, vitae molestie metus urna quis lectus. Proin at tincidunt dolor. Donec ornare et lectus ac venenatis. Aliquam ex est, vestibulum consectetur est vel, pellentesque elementum velit. Sed ullamcorper ex neque, et aliquet purus feugiat eu. Quisque tempor erat et justo efficitur maximus. Morbi velit sem, pretium a iaculis a, bibendum sed justo. </p>
 						  </div>
+                          <?php
+                          foreach ($aboutContent as $outputAboutContent)
+                          {
+                              echo "<div>
+								<p class='contentLeft'>" . $outputAboutContent['text_input'] . "</p>
+									<div class='aboutImages'>
+										<img src='images/logo-orange.png' alt='An image of...'></img>
+									</div>
+                                <p class='contentRight'>" . $outputAboutContent['text_input'] . "</p>
+						</div>";
+                          }
+                          ?>
 					  </div>
               </section>
 				
@@ -141,23 +157,6 @@ $homeContent = retrieveHomeData();
 						<h3>PORTFOLIO</h3>
 					</div>
 					<div class="portfolioRows">
-
-<!--                        --><?php
-//                        foreach ($homeContent as $outputHomeContent)
-//                        {
-//                      echo '<h1>' . $outputHomeContent['section_title'] . '</h1>';
-//                      echo '<p>' . $outputHomeContent['text_input'] . '</p>';
-//
-//                           echo "<div class='portfolioRow'>
-//							<a class='portfolioImage' href='my first project'><img src='images/pilotshop-logo.png' alt='A photo of my first project'></a>
-//							<div class='portfolioContent'>
-//								<h4>" . $outputHomeContent['section_title'] . "</h4>
-//								<p>" . $outputHomeContent['text_input'] . "</p>
-//							</div>
-//						</div>";
-//                        }
-//                       ?>
-
 						<div class="portfolioRow">
 							<a class="portfolioImage" href="my first project"><img src="images/pilotshop-logo.png" alt="A photo of my first project"></a>
 							<div class="portfolioContent">
@@ -183,6 +182,18 @@ $homeContent = retrieveHomeData();
 								<p>Sed euismod, neque id blandit consectetur, enim leo cursus mauris, vitae molestie metus urna quis lectus. Proin at tincidunt dolor. Donec ornare et lectus ac venenatis. Aliquam ex est, vestibulum consectetur est vel, pellentesque elementum velit. Sed ullamcorper ex neque, et aliquet purus feugiat eu. Quisque tempor erat et justo efficitur maximus. Morbi velit sem, pretium a iaculis a, bibendum sed justo. </p>
 							</div>
 						</div>
+                        <?php
+                        foreach ($portfolioContent as $outputPortfolioContent)
+                        {
+                            echo "<div class='portfolioRow'>
+							<a class='portfolioImage' href='my first project'><img src='' alt='image would go here'></a>
+							<div class='portfolioContent'>
+								<h4>" . $outputPortfolioContent['section_title'] . "</h4>
+								<p>" . $outputPortfolioContent['text_input'] . "</p>
+							</div>
+						</div>";
+                        }
+                        ?>
 					</div>
 			</section>
 				
