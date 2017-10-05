@@ -1,6 +1,11 @@
 <?php
-include_once('about-add-select-pdo.php');
-$dbResults = retrieveAboutData();
+
+include_once('loginProcess.php');
+
+if(!isLoggedIn()) {
+    header('Location: login.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -12,46 +17,38 @@ $dbResults = retrieveAboutData();
     <title>About CMS Form</title>
 </head>
 <body>
+<div class="cmsNav">
+    <div class="navOption">
+        <a href="home-form.php"><input class="aboutOption" type="submit" value="Home"></a>
+        <a href="portfolio-form.php"><input class="portfolioOption" type="submit" value="Portfolio"></a>
+    </div>
+</div>
+<form class="logout" method="POST" action="logout.php">
+    <input type="submit" value="LogOooot">
+</form>
 <div class="cmsForm">
-    <form action="about-add-insert-pdo.php" method="POST">
-        <h1>Add to About</h1>
+    <form action="about-insert.php" method="POST">
+        <h1>Add to About Me</h1>
         <h2>Add Section</h2>
-        <input type="text" name="section_title">
+            <input type="text" name="section_title">
         <h2>Add Text</h2>
-        <textarea rows="16" name="text_input" cols="75"></textarea>
+            <textarea rows="16" name="text_input" name="" cols="75"></textarea>
         <br>
-        <input class="editingButton" type="submit" value="Add">
+            <input class="editingButton" type="submit" value="Add">
     </form>
-    <form action="about-edit-insert-pdo.php" method="POST">
-        <h1>Edit About</h1>
-        <h3>Edit Options</h3>
-        <select class="deleteAboutOptions" name="toDelete">
-            <?php
-            foreach ($dbResults as $deleteOption) {
-                echo "<option>" . $deleteOption['section_title'] . "</option>";
-            }
-            ?>
-        </select>
+    <form action="PDO-insert.php" method="POST">
+        <h1>Edit About Me</h1>
         <h2>Edit Section Name</h2>
-        <input type="text" name="section_title"><br>
-        <br>
+            <input type="text" name="section_title">
         <h2>Edit Text</h2>
-        <textarea rows="16" name="text_input" cols="75"></textarea>
+            <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
-        <input class="editingButton" type="submit" value="Make Changes">
+            <input class="editingButton" type="submit" value="Make Changes">
     </form>
-    <form action="about-delete-delete-pdo.php" method="POST">
-        <h1>Delete From About</h1>
-        <h3>Delete Options</h3>
-        <select class="deleteAboutOptions" name="toDelete">
-            <?php
-            foreach ($dbResults as $deleteOption) {
-                echo "<option>" . $deleteOption['section_title'] . "</option>";
-            }
-            ?>
-        </select>
+    <form action="" method="POST">
+        <h1>Delete From About Me</h1>
         <br>
-        <input class="editingButton" type="submit" value="Delete">
+            <input class="editingButton" type="submit" value="Delete">
     </form>
 </div>
 </body>
