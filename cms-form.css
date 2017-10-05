@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    border-top: 20px solid #F2A274;
     border-bottom: 20px solid #F2A274;
 }
 
@@ -88,4 +87,21 @@ select {
     border: 2px solid #FF7E47;
     border-radius: 4px;
     margin: 20px 0px 20px 0px;
+}
+
+.cmsNav {
+    overflow: auto;
+    width: 100%;
+    background-color: #FF7E47;
+    padding-top: 10px;
+}
+
+.navOption {
+    float: right;
+    margin-right: 40px;
+}
+
+.logout {
+    float: right;
+    margin-right: 40px;
 }
