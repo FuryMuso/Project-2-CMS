@@ -33,11 +33,12 @@ $homeData = retrieveHomeData();
         <h1>Add to Home</h1>
         <h2>Add Section</h2>
         <select name="section_title">
-            <option value="intro_header">Intro Header</option>
-            <option value="intro">Intro Text</option>
-            <option value="column">Column</option>
+            <?php
+            foreach ($homeData as $addOption) {
+                echo "<option value='" . $addOption['id'] . "'>" . $addOption['id'] . ' - ' . $addOption['section_title'] . "</option>";
+            }
+            ?>
         </select>
-
         <h2>Add Text</h2>
             <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
