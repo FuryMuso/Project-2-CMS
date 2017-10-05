@@ -24,7 +24,7 @@ $dbDeleteResults = retrieveHomeData();
     </form>
 
     <form action="home-form.php" method="POST">
-        <h1 id="editSection">Edit Home</h1>
+        <h1>Edit Home</h1>
         <h3>Edit Options</h3>
         <select class="editHomeOptions" name="toEdit">
             <?php
