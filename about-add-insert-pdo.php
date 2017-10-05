@@ -1,7 +1,7 @@
 <?php
 
 /**
- * function to add data to about table of database
+ * function to add data to About table of database
  */
 function addAboutContent()
 {
