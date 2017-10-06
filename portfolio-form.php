@@ -1,5 +1,6 @@
 <?php
 
+include_once('functions.php');
 include_once('portfolio-add-select-pdo.php');
 include_once('loginProcess.php');
 
@@ -21,8 +22,8 @@ $portfolioData = retrievePortfolioData();
 <body>
 <div class="cmsNav">
     <div class="navOption">
-        <a href="about-form.php"><input class="aboutOption" type="submit" value="Home"></a>
-        <a href="portfolio-form.php"><input class="portfolioOption" type="submit" value="Portfolio"></a>
+        <a href="home-form.php"><input class="homeOption" type="submit" value="Home"></a>
+        <a href="about-form.php"><input class="aboutOption" type="submit" value="About"></a>
     </div>
 </div>
 <form class="logout" method="POST" action="logout.php">
@@ -58,7 +59,7 @@ $portfolioData = retrievePortfolioData();
     </form>
     <?php
     if ($_POST['toEdit']) {
-        $currentSection = findPortfolioSection($_POST['toEdit'], $portfolioData);?>
+        $currentSection = findSection($_POST['toEdit'], $portfolioData);?>
         <form action="portfolio-edit-insert-pdo.php" method="POST">
             <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
             <h2>Edit Text</h2>

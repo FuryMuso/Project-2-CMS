@@ -1,5 +1,6 @@
 <?php
 
+include_once('functions.php');
 include_once('about-add-select-pdo.php');
 include_once('loginProcess.php');
 
@@ -58,7 +59,7 @@ $aboutData = retrieveAboutData();
     </form>
     <?php
     if ($_POST['toEdit']) {
-        $currentSection = findAboutSection($_POST['toEdit'], $aboutData);?>
+        $currentSection = findSection($_POST['toEdit'], $aboutData);?>
         <form action="about-edit-insert-pdo.php" method="POST">
             <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
             <h2>Edit Text</h2>

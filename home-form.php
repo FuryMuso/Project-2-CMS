@@ -1,5 +1,6 @@
 <?php
 
+include_once('functions.php');
 include_once('home-add-select-pdo.php');
 include_once('loginProcess.php');
 
@@ -58,7 +59,7 @@ $homeData = retrieveHomeData();
     </form>
     <?php
     if ($_POST['toEdit']) {
-        $currentSection = findHomeSection($_POST['toEdit'], $homeData);?>
+        $currentSection = findSection($_POST['toEdit'], $homeData);?>
         <form action="home-edit-insert-pdo.php" method="POST">
             <input type="hidden" value="<?php echo $currentSection['id']; ?>" name="id">
             <h2>Edit Text</h2>
