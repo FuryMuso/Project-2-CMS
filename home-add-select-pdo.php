@@ -17,12 +17,12 @@ function retrieveHomeData()
 
 }
 
-function findHomeSection($id, $data) {
-    foreach ($data as $section) {
-        if($section['id'] == $id) {
-            return $section;
-        }
-    }
-}
+//function findHomeSection($id, $data) {
+//    foreach ($data as $section) {
+//        if($section['id'] == $id) {
+//            return $section;
+//        }
+//    }
+//}
 
 ?>

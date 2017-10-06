@@ -17,12 +17,12 @@ function retrievePortfolioData()
 
 }
 
-function findPortfolioSection($id, $data) {
-    foreach ($data as $section) {
-        if($section['id'] == $id) {
-            return $section;
-        }
-    }
-}
+//function findPortfolioSection($id, $data) {
+//    foreach ($data as $section) {
+//        if($section['id'] == $id) {
+//            return $section;
+//        }
+//    }
+//}
 
 ?>

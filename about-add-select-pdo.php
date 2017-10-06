@@ -16,13 +16,13 @@ function retrieveAboutData()
     return $query->fetchAll();
 
 }
-
-function findAboutSection($id, $data) {
-    foreach ($data as $section) {
-        if($section['id'] == $id) {
-            return $section;
-        }
-    }
-}
+//
+//function findAboutSection($id, $data) {
+//    foreach ($data as $section) {
+//        if($section['id'] == $id) {
+//            return $section;
+//        }
+//    }
+//}
 
 ?>
