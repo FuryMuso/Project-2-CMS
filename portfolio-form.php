@@ -33,20 +33,14 @@ $portfolioData = retrievePortfolioData();
     <form action="portfolio-add-insert-pdo.php" method="POST">
         <h1>Add to Portfolio</h1>
         <h2>Add Section</h2>
-        <select name="section_title">
-            <?php
-            foreach ($portfolioData as $addOption) {
-                echo "<option value='" . $addOption['id'] . "'>" . $addOption['id'] . ' - ' . $addOption['section_title'] . "</option>";
-            }
-            ?>
-        </select>
+            <input type="text" name='section_title'>
         <h2>Add Text</h2>
             <textarea rows="16" name="text_input" cols="75"></textarea>
         <br>
         <input class="editingButton" type="submit" value="Add">
     </form>
     <form action="portfolio-form.php" method="POST">
-        <h1>Edit About</h1>
+        <h1>Edit Portfolio</h1>
         <h3>Edit Options</h3>
         <select class="editPortfolioOptions" name="toEdit">
             <?php
@@ -69,7 +63,7 @@ $portfolioData = retrievePortfolioData();
         </form>
     <?php } ?>
     <form action="portfolio-delete-delete-pdo.php" method="POST">
-        <h1>Delete From Home</h1>
+        <h1>Delete From Portfolio</h1>
         <h3>Delete Options</h3>
         <select class="deletePortfolioOptions" name="toDelete">
             <?php

@@ -34,11 +34,14 @@ $homeData = retrieveHomeData();
         <h1>Add to Home</h1>
         <h2>Add Section</h2>
         <select name="section_title">
-            <?php
-            foreach ($homeData as $addOption) {
-                echo "<option value='" . $addOption['id'] . "'>" . $addOption['id'] . ' - ' . $addOption['section_title'] . "</option>";
-            }
-            ?>
+<!--            --><?php
+//            foreach ($homeData as $addOption) {
+//                echo "<option value='" . $addOption['id'] . "'>" . $addOption['id'] . ' - ' . $addOption['section_title'] . "</option>";
+//            }
+//            ?>
+            <option>intro</option>
+            <option>intro_header</option>
+            <option>column</option>
         </select>
         <h2>Add Text</h2>
             <textarea rows="16" name="text_input" cols="75"></textarea>

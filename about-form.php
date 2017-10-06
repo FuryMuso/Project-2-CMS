@@ -69,7 +69,7 @@ $aboutData = retrieveAboutData();
         </form>
     <?php } ?>
     <form action="about-delete-delete-pdo.php" method="POST">
-        <h1>Delete From Home</h1>
+        <h1>Delete From About</h1>
         <h3>Delete Options</h3>
         <select class="deleteAboutOptions" name="toDelete">
             <?php
