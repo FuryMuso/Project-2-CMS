@@ -35,10 +35,19 @@ h2 {
 .loginField {
     margin: 0 auto;
     text-align: center;
+}
 
+input {
+    font-family: 'Raleway',sans-serif;
+    font-weight: bold;
+    border: 2px solid #F2A274;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
 }
 
 .loginButton {
     margin: 0 auto;
     text-align: center;
+    margin-top: 40px;
+
 }
