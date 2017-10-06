@@ -139,12 +139,12 @@ $portfolioContent = retrievePortfolioData();
                           foreach ($aboutContent as $outputAboutContent)
                           {
                               echo "<div>
-								<p class='contentLeft'>" . $outputAboutContent['text_input'] . "</p>
+								        <p class='contentLeft'>" . $outputAboutContent['text_input'] . "</p>
 									<div class='aboutImages'>
-										<img src='images/logo-orange.png' alt='An image of...'></img>
+										<img src='images/logo-orange.png' alt='An image of...'>
 									</div>
-                                <p class='contentRight'>" . $outputAboutContent['text_input'] . "</p>
-						</div>";
+                                        <p class='contentRight'>" . $outputAboutContent['text_input'] . "</p>
+						            </div>";
                           }
                           ?>
 					  </div>
