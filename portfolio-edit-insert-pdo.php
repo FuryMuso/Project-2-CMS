@@ -14,7 +14,7 @@ function editPortfolioContent()
     $query->execute();
 }
 
-editHomeContent();
+editPortfolioContent();
 
 header ('Location: portfolio-form.php');
 
